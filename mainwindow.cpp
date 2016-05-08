@@ -7,6 +7,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+
     menuHome = menuBar()->addMenu("&Acceuil");
     menuAffichage = menuBar()->addMenu("A&ffichage");
     menuClient = menuBar()->addMenu("&Client");
@@ -69,11 +70,12 @@ MainWindow::MainWindow(QWidget *parent) :
 
     layoutmiddle->addLayout(formulaireClient);
     layoutmiddle->addLayout(boutonform);
-    layoutpetitcontainer->addLayout(layoutasideleft);    
+    layoutpetitcontainer->addLayout(layoutasideleft);
     layoutpetitcontainer->addLayout(layoutmiddle);
     layoutpetitcontainer->addLayout(layoutasideright);
 
     this->setLayout(layoutpetitcontainer);
+
 }
 
 MainWindow::~MainWindow()

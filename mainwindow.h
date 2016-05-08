@@ -22,11 +22,11 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 signals:
-
 public slots:
 
 private:
     Ui::MainWindow *ui;
+
 
     QMenu *menuHome;
     QMenu *menuAffichage;
@@ -62,6 +62,12 @@ private:
 
     QPushButton *enregistrer;
     QPushButton *annuler;
+
+
+    QPushButton *boutonvehicule;
+    QPushButton *boutonlocation;
+    QPushButton *boutonclient;
+
 
 
 };
