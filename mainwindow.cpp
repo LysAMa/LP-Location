@@ -36,7 +36,13 @@ MainWindow::MainWindow(QWidget *parent) :
     menuClient->addAction(actionEnregistrer);
     menuAffichage->addAction(actionAfficher);
 
+    boutonform = new QVBoxLayout;
+    layoutpetitcontainer = new QVBoxLayout;
+    layoutasideright = new QHBoxLayout;
+    layoutasideleft = new QHBoxLayout;
+    layoutmiddle = new QHBoxLayout;
     formulaireClient = new QFormLayout;
+
     codeclient = new QLineEdit;
     formulaireClient->addRow("Code: ",codeclient);
     nomclient = new QLineEdit;
@@ -58,18 +64,12 @@ MainWindow::MainWindow(QWidget *parent) :
     enregistrer = new QPushButton("Enregistrer");
     boutonform->addWidget(enregistrer);
 
-    annuler = new QPushButton("Annuler");
+    annuler = new QPushButton("vague");
     boutonform->addWidget(annuler);
 
-    boutonform = new QVBoxLayout;
-    layoutpetitcontainer = new QVBoxLayout;
-    layoutasideright = new QHBoxLayout;
-    layoutasideleft = new QHBoxLayout;
-    layoutmiddle = new QHBoxLayout;
-
-    layoutmiddle->addLayout(boutonform);
-    layoutpetitcontainer->addLayout(layoutasideleft);
     layoutmiddle->addLayout(formulaireClient);
+    layoutmiddle->addLayout(boutonform);
+    layoutpetitcontainer->addLayout(layoutasideleft);    
     layoutpetitcontainer->addLayout(layoutmiddle);
     layoutpetitcontainer->addLayout(layoutasideright);
 
